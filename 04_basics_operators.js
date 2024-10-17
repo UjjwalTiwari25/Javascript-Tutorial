@@ -79,8 +79,13 @@ console.log(nullableValue ?? 'default'); // 'default' (if nullableValue is null/
 let anotherValue = 0;
 console.log(anotherValue ?? 'default');  // 0 (since it's not null/undefined)
 
+// Special Operators: Ternary Operator:
+//A shorthand for if-else statements
+let age = 18;
+let message = age >= 18 ? "Adult" : "Minor";
+console.log(message);  // Output: Adult
 
-/******************Interivew Questions*********************/
+//***********Interview Question******************
 
 // 1.Implicit Type Conversion (Concatenation):
 
@@ -148,3 +153,52 @@ console.log(++num1);  // 6
 let nmu2= "5";
 console.log(nmu2++);  // 5
 console.log(nmu2);    // 6
+
+
+//*************************Practice Questions*********************/
+
+console.log("1"+2+2);//122...Jab + operator ke dono operands mein se ek string ho, toh JavaScript doosre operand ko bhi string mein convert karta hai (concatenation ke liye).
+console.log(1+2+"2");//32...(1+2) iske dono operand number hai to inko pahle add karenge...fir (3+"2")..32 hojayega
+console.log(1+"2"+2);//122
+console.log(1+2+2);//6
+console.log((3+4)*5%3);//2
+
+console.log(true);
+console.log(false);
+console.log(!true);
+console.log(!!true);
+console.log(!!false);
+
+console.log(+true);
+console.log(+false);
+
+let num4,num5,num6;
+num4=num5=num6=5;
+console.log(num4+num5+num6);
+
+let gameCounter =100
+//gameCounter++;
+++gameCounter;
+console.log(gameCounter);
+
+//*************Pre and Post increment and decrement****************
+
+/*
+1. ++num1 (Pre-increment)
+Initial value of num1: "5" (a string).
+The ++ operator automatically converts the string "5" into a number.
+Since this is a pre-increment operator, the value of num1 is incremented before it is logged. So:
+"5" is first converted to 5 (a number).
+Then, 5 is incremented to 6.
+This incremented value (6) is logged to the console.
+Output: 6
+
+
+2. nmu2++ (Post-increment)
+Initial value of nmu2: "5" (a string).
+Again, the ++ operator automatically converts the string "5" into a number.
+This time, the ++ is a post-increment operator, so the value of nmu2 is logged first and then incremented:
+"5" is first converted to 5 (a number).
+The value 5 is logged to the console.
+Then, the value is incremented to 6 after the logging.
+Output: 5*/
