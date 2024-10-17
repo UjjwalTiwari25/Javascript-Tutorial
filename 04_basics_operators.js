@@ -48,6 +48,20 @@ console.log(2 < 3);   // Less than -> true
 console.log(2 >= 3);  // Greater than or equal to -> false
 console.log(2 <= 3);  // Less than or equal to -> true
 
+
+console.log("Sample Question");
+console.log(2 == "2");  // Equal -> true
+console.log("2"<3);//js convert "2" to 2 and than compare with 3...
+//means js allows comparision of two different data types...but typescript doesnot allow
+console.log(null>0);//falsy...js convert null to 0
+console.log(null==0);//false...unexpected result
+console.log(null>=0);//true
+
+console.log(undefined==0);//false
+console.log(undefined>0);//false
+console.log(undefined<0);//false
+
+
 // Logical Operators:
 let x = 2;
 let y = 3;
@@ -109,7 +123,7 @@ console.log("Hello" - 2);  // NaN
 //Explanation: == allows type coercion,(ye type convert krke check karega equal hai ya nhi)
 // while === checks both value and type without coercion.(isme exactly equal diya rahega to he true return karega )
 console.log(2 == "2");  // true
-console.log(2 === "2");  // false
+console.log(2 === "2");  // false....strictly check..it also check data types
 console.log(0 == false);  // true
 console.log(0 === false);  // false
 

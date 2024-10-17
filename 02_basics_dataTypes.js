@@ -42,6 +42,21 @@ let func = greet;
 // A new variable 'func' is assigned the 'greet' function, so now 'func' refers to the same function as 'greet'
 
 func("ujjwal");  
-// The 'func' function is called with "ujjwal" as the argument, so it outputs: "Hello ujjwal"
+// The 'func' function is called with "ujjwal" as the argument, so it outputs: "Hello ujjwal
 
 
+//function can be treated as a variable in javaascript...
+
+/**
+ * Logs a simple "Hello" message to the console.
+ */
+const myFunction = function()
+{
+    console.log("Hello");
+}
+
+//return types of non premitive data types is object..
+//but return types of function is called object function
+//..but it gives only function in output..example bellow 👇
+
+console.log(typeof myFunction);//function
