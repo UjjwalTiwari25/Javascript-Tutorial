@@ -43,3 +43,38 @@ let person = {
   //when property names have spaces or special characters, or if the property name is dynamically assigned
   //example👇
   console.log(newUser["full name"]);//Ujjwal Tiwari
+
+ // create a symbol and use it in the key of object
+const mySym = Symbol('Keys');
+
+const newUser1={
+    name:"Ujjwal",
+    mySym:"myKeys1",
+    "full name": "Ujjwal Tiwari",
+    age:21,
+    email:"ujjwal@123.com",
+    isLoggedIn:true,
+    isAdmin:false,
+    lastLoginDays :["Monday","Tuesday","Wednesday"]
+  }
+  console.log( newUser1.mySym);
+  console.log(typeof newUser1.mySym);//
+  //Aise symbol ko object me store  nhi kar sakte hai...agar output de v deta hai to datatpe string dega
+
+  //correct way
+  const mySym1 = Symbol('Keys1');  // Symbol declaration
+
+  const newUser2 = {
+      name: "Ujjwal",
+      [mySym1]: "myKeys1",  // Correct way to use symbol as a key
+      "full name": "Ujjwal Tiwari",
+      age: 21,
+      email: "ujjwal@123.com",
+      isLoggedIn: true,
+      isAdmin: false,
+      lastLoginDays: ["Monday", "Tuesday", "Wednesday"]
+  };
+  
+  console.log(newUser2[mySym1]);  // Outputs "myKeys1"
+  console.log(typeof newUser2[mySym1]);  // Outputs "string"
+  
