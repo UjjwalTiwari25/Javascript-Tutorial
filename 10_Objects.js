@@ -29,6 +29,7 @@ let person = {
 
   const newUser={
     name:"Ujjwal",
+    "full name": "Ujjwal Tiwari",
     age:21,
     email:"ujjwal@123.com",
     isLoggedIn:true,
@@ -40,4 +41,5 @@ let person = {
   console.log(newUser.email);//dot notation
   console.log(newUser["email"]);//bracket notation..Bracket notation is useful 
   //when property names have spaces or special characters, or if the property name is dynamically assigned
-  
+  //example👇
+  console.log(newUser["full name"]);//Ujjwal Tiwari
