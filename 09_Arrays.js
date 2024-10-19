@@ -63,5 +63,40 @@ let greaterThanTwo = numbers3.filter(num => num > 2);
 console.log(greaterThanTwo);  // Output: [3, 4]
 
 
+//******************Arrays Part 2******************
 
 
+const bat_heros = ["batman", "superman", "wonderwoman"];
+const ball_heros=["Rohit Sharma", "Sachin Tendulkar", "Virat Kohli"];
+bat_heros.push(ball_heros);
+console.log(bat_heros);
+//another way to add two array
+const all_heros = bat_heros.concat(ball_heros);
+console.log(all_heros);
+
+//another method
+const all_new_heros=[...bat_heros,...ball_heros];
+console.log(all_new_heros);
+//*********************************** */
+const anotherArray =[1,2,3,[4,5,[6,7]],[2,4]];
+
+const usableArray = anotherArray.flat(Infinity);
+console.log(usableArray);
+/* Output:[
+    1, 2, 3, 4, 5,
+    6, 7, 2, 4
+  ]
+    */
+   
+console.log(Array.isArray(anotherArray));//checking whether given value is array or not
+console.log(Array.isArray("UJJWAL"));//false...its string
+console.log(Array.from("UJJWAL"));//[ 'U', 'J', 'J', 'W', 'A', 'L' ]...CONVERTED STRING TO ARRAY
+
+console.log(Array.from({name:"UJJWAL"}));//[]..empty array because we have not mention that..key ko array mi convert karna hai ya value ko
+
+
+let kohli_score = 183
+let rohit_score = 264
+let dhoni_score = 183
+
+console.log(Array.of(kohli_score,rohit_score,dhoni_score));//[ 183, 264, 183 ]
