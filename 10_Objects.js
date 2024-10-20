@@ -37,6 +37,17 @@ let person = {
     lastLoginDays :["Monday","Tuesday","Wednesday"]
   }
 
+  //changing properties of object
+  newUser.email="ujjwal@1234.com";
+
+  //freezing object
+  Object.freeze(newUser);
+  //cross checking that whether object is frozen or not
+  newUser.email="ujjwal@234.com";
+  console.log("New email is " + newUser.email);
+
+  // ******************************************************************************
+
   //ways to access properties of object
   console.log(newUser.email);//dot notation
   console.log(newUser["email"]);//bracket notation..Bracket notation is useful 
