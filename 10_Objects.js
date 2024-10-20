@@ -155,3 +155,24 @@ const newUser1={
     isLoogedin: true
   };
   console.log(regularObject.details.fullname);//{first: "Ujjwal", last: "Tiwari"}
+
+  //combining objects
+  const obj1={
+    name:"Ujjwal",
+    age:22}
+
+  const obj2={
+    email:"ujjwal@123.com",
+    city:"Mumbai"}
+  
+  const obj3={obj1,obj2}
+  console.log(obj3);
+  /* Output
+  {
+  obj1: { name: 'Ujjwal', age: 22 },
+  obj2: { email: 'ujjwal@123.com', city: 'Mumbai' }
+}
+  ........we are facing same issue as we faced during array..that object is created inside object
+
+  */
+ 
