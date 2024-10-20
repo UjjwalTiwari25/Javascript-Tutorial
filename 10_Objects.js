@@ -130,6 +130,28 @@ const newUser1={
 
   // ***************************************************************************************************
 
-  const tinderuser= new Object()
-  // tinderuser.name="Ujjwal"
-  console.log(tinderuser.name);//Ujjwal
+  const tinderuser= new Object()//it create a singlton object
+  const tinderUser2={}//it also create an empty object but  it is a non singleton object
+  console.log(tinderuser);//empty object
+
+  tinderUser2.id=1;
+  tinderUser2.name="Ujjwal";
+  tinderUser2.age=22;
+  console.log(tinderUser2);//{id: 1, name: "Ujjwal", age: 22}
+
+
+  //*******************************************************************************************
+  //creating object under an object
+  const regularObject = {
+    email: "ujjwal@123.com",
+
+    details: {
+         fullname :{
+            first: "Ujjwal",
+            last: "Tiwari"},
+         age: 22,
+         city: "Mumbai"
+      },
+    isLoogedin: true
+  };
+  console.log(regularObject.details.fullname);//{first: "Ujjwal", last: "Tiwari"}
