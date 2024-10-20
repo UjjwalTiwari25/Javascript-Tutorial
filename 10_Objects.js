@@ -104,3 +104,32 @@ const newUser1={
       console.log("Hello " + this.name);
     }
   }
+
+  //Another example
+  const anotherUser={
+    name:"Ujjwal",
+    "full name": "Ujjwal Tiwari",
+    age:21,
+    email:"ujjwal@123.com",
+    isLoggedIn:true,
+    isAdmin:false,
+    lastLoginDays :["Monday","Tuesday","Wednesday"]
+  }
+
+  anotherUser.greet= function(){
+    console.log("Hello Bhai");
+  }
+  console.log(anotherUser.greet);//annynomous function..function execute nhi hua hai sirf function ka reference aya hai
+  console.log(anotherUser.greet());//Hello Bhai
+
+  anotherUser.greet= function(){
+    console.log(`Hello Bhai, ${this.name}`);
+  }
+  console.log(anotherUser.greet());//Hello Bhai, Ujjwal
+
+
+  // ***************************************************************************************************
+
+  const tinderuser= new Object()
+  // tinderuser.name="Ujjwal"
+  console.log(tinderuser.name);//Ujjwal
