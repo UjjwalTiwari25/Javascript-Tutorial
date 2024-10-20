@@ -25,5 +25,7 @@ console.log(x);  // Output: 10 (x is accessible outside the block)
 Problem: Yaha x block ke bahar bhi accessible hai, jabki aapko lagta tha ki yeh sirf if block ke andar accessible hoga.*/
 
 
-// accountCity="Mumbai";//bina variable a aage likhe v uska memory reserve kr sakte hai ..but its not a good practice.
+// accountCity="Mumbai";bina variable a aage likhe v uska memory reserve kr sakte hai ..but its not a good practice.
 
+
+//*********************************************************************** */
