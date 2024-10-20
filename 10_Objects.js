@@ -175,4 +175,68 @@ const newUser1={
   ........we are facing same issue as we faced during array..that object is created inside object
 
   */
+  const obj4 = Object.assign({},obj1,obj2)//{}..is target object
+ console.log(obj1); 
+ //Output:{ name: 'Ujjwal', age: 22, email: 'ujjwal@123.com', city: 'Mumbai' }
  
+
+ //anotherway of combining objects
+ const obj5 = {...obj1,...obj2}
+ console.log(obj5);
+
+ //accessing objects inside an array
+ const arr = [
+    {
+      name1: "Ujjwal",
+      age1: 22
+    },
+    {
+      name2: "Ujjwal",
+      age2: 22
+    }
+  ];
+  console.log(arr[1].name1);//Ujjwal
+
+
+  //accessing keys and value seperately of an object
+  console.log(Object.keys(tinderUser2));//[ 'id', 'name', 'age' ]....its datatype is array
+  console.log(Object.values(tinderUser2));//[ 1, 'Ujjwal', 22 ]
+
+
+  //All other important methods of an array
+  console.log(Object.entries(tinderUser2));//[ [ 'id', 1 ], [ 'name', 'Ujjwal' ], [ 'age', 22 ] ]
+
+
+  // *******************************************************************************************************************************
+  //Constructor function
+  //You can create multiple objects of the same type using a constructor function. A constructor function initializes the properties of an object.
+  function Person(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    /**
+     * Prints a greeting message with the person's name.
+     * Example:
+     * person1.greet() // "Hi, I'm Ujjwal"
+     */
+    this.greet = function() {
+      console.log("Hi, I'm " + this.name);
+    };
+  }
+  
+  let user1 = new Person("Ujjwal", 25, "ujjwal@123.com");
+  let user2 = new Person("Kohli", 34, "kohli@xyz.com");
+  
+  user1.greet();  // Output: Hi, I'm Ujjwal
+  user2.greet();  // Output: Hi, I'm Kohli
+  
+
+  //*******************************************************************
+  //Prototype
+  /*JavaScript uses prototypes to inherit properties and methods from one object to another.
+
+Every object in JavaScript has a prototype. Methods and properties that are common to all
+ objects can be added to the prototype
+ so that all objects of that type inherit them. */
+
+
