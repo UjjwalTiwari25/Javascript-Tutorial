@@ -78,3 +78,18 @@ const newUser1={
   console.log(newUser2[mySym1]);  // Outputs "myKeys1"
   console.log(typeof newUser2[mySym1]);  // Outputs "string"
   
+
+  //Adding function in an object
+    /**
+     * Prints a greeting message with the person's name.
+     * 
+     * Example:
+     * person3.greet() // "Hello Ujjwal"
+     */
+  let person3= {
+    name: "Ujjwal",
+    age: 22,
+    greet: function() {
+      console.log("Hello " + this.name);
+    }
+  }
