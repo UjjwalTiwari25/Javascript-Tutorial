@@ -247,3 +247,19 @@ const course ={
   courseInstructor:"Ujjwal Tiwari"
 }
 // console.log(course.courseInstructor);..not a good practice 
+
+const{courseInstructor}=course
+console.log(courseInstructor);//Ujjwal Tiwari....Desctructurig of Objects
+
+
+
+//*************************************************************************** */
+// Diiference between objects and JSON is that....
+// JSON is a text format that is used to store and transmit data...aur isme keys and values dono string mi hoti hai unlike objects
+// aur isko kisi variable mi nhi store kiye rahte hai
+
+// {
+//   "name":"Ujjwal",
+//   "age":22,
+//   "email":"ujjwal@123.com"
+// }
