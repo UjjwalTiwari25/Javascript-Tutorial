@@ -144,8 +144,9 @@ console.log(returnSecondValue(myArray));  // Output: 20
 
 //******************************************Anonymous function****************** */
 /*Anonymous Functions
-Anonymous functions are functions without a name. 
-They are often used in situations where functions are used as arguments or immediately invoked.
+Yeh wo function hota hai jiska koi naam nahi hota.
+Iska zyada use tab hota hai jab hume ek function ko as a argument pass karna ho ya phir turant execute karna ho.
+Example mein setTimeout ek built-in function hai jo ek anonymous function ko run karta hai 3 seconds ke baad:
 */
 setTimeout(function() {
     console.log('This message is delayed by 3 seconds');
@@ -155,8 +156,9 @@ setTimeout(function() {
 //***************************Callback function********************************** */
 
 /*Callback Functions
-A callback function is a function passed as an argument to another function,
- which is then executed inside the outer function.
+Callback function wo function hota hai jo kisi doosre function mein as a argument pass kiya jata hai, 
+aur jab main function apna kaam kar leta hai to wo callback ko call karta hai.
+Example mein mainfunction ek function hai jo ek callback ko leta hai, aur 3 seconds ke baad callback ko call karta hai:
  */
 
 function mainfunction(callback) {
@@ -170,3 +172,11 @@ function callbackFunction(result) {
     }
 
 mainfunction(callbackFunction);
+
+/*Yahaan mainfunction ke andar humne callbackFunction ko as a argument pass kiya. 
+Jab 3 seconds ka delay khatam hota hai, to callbackFunction ko "Operation completed" message ke sath call kiya jata hai.
+
+Pehle mainfunction ke through "Performing operations" print hoga.
+Phir 3 seconds ke baad, callback function call hoga aur result print karega: 
+"Result: Operation completed"
+*/
