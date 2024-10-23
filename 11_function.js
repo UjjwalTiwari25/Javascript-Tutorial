@@ -64,7 +64,7 @@ greet('Virat'); // 'Virat' is an argument
 //Default parameters allow you to initialize function parameters with default values 
 //if no arguments are passed or undefined is passed.
 
-function greet1(name = 'Guest') {
+function greet1(name = 'Guest') {//here we have given default value as guest ...agar kuchh pass nhi karenge to guest ayega 
     console.log(`Hello, ${name}`);
 }
 
@@ -91,3 +91,44 @@ function loginUserMessage1(username1){
 }
 // console.log(loginUserMessage1('Ujjwal'));
 console.log(loginUserMessage1());
+
+
+//*****************************Rest parameters and arguments**************************************************************** */
+/*The rest parameter is indicated by three dots (...) ,called rest operator
+
+The rest parameter in JavaScript allows you to represent an indefinite number of arguments as an array. 
+It is useful when you don't know how many arguments will be passed into a function and want to handle them in a flexible way.
+
+Commonly used when we make shopping card..where user can add any number of items
+
+*/
+
+function calculateCardPrice(...items) {
+    return items;
+} 
+console.log(calculateCardPrice(10));//Output: [ 10 ]
+console.log(calculateCardPrice(10, 20, 30));//Output: [ 10, 20, 30 ]
+
+//why it is called rest parameter?
+function calculateCardPrice1(val1,val2,...items) {
+    return items;
+}
+console.log(calculateCardPrice1(10,20,30,40,50));//Output: [ 30, 40, 50 ]...it will give rest output..it does not include value of val1 and val2
+
+
+//*********************Passing object into function**************** */
+ const user ={
+     name:"Ujjwal",
+     age:21
+ }
+ function handleObject(anyobject){
+     console.log(`Username is ${anyobject.name} and age is ${anyobject.age}`);
+ }
+//  handleObject(user);
+
+
+//aise v directly object pass kr sakte hai
+handleObject({
+    name:"Sam",
+    age:22
+})
