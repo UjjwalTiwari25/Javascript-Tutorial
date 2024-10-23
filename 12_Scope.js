@@ -26,7 +26,21 @@ console.log(c) //dikkat isme ata hai..ye var block k bahar v accssible hota hai
 
 
 //****for loop scope********************** */
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
     
-}//isme i block scope k andar he hai
+// }//isme i block scope k andar he hai
+
+
+//***************************************************Scope level and mini hoisting in js******** */
+//Working of nested scope
+function one() {
+    const username = "Ujjwal";
+    function two() {
+        const website = "CodeWithUjjwal.com";
+        console.log(username);
+        
+    }
+    console.log(website);
+}
+one();
