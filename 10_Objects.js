@@ -231,7 +231,7 @@ const newUser1={
   user2.greet();  // Output: Hi, I'm Kohli
   
 
-  //*******************************************************************
+  //******************************************************************************************
   //Prototype
   /*JavaScript uses prototypes to inherit properties and methods from one object to another.
 
@@ -239,4 +239,11 @@ Every object in JavaScript has a prototype. Methods and properties that are comm
  objects can be added to the prototype
  so that all objects of that type inherit them. */
 
+//************************************************************************************** */
 
+const course ={
+  coursename:"Javascript",
+  duration:30,
+  courseInstructor:"Ujjwal Tiwari"
+}
+// console.log(course.courseInstructor);..not a good practice 
