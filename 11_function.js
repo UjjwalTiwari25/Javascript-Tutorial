@@ -132,3 +132,41 @@ handleObject({
     name:"Sam",
     age:22
 })
+
+//passing array in function
+
+const myArray = [10, 20, 30];
+function returnSecondValue(getArray) {
+    return getArray[1];
+}
+console.log(returnSecondValue(myArray));  // Output: 20
+
+
+//******************************************Anonymous function****************** */
+/*Anonymous Functions
+Anonymous functions are functions without a name. 
+They are often used in situations where functions are used as arguments or immediately invoked.
+*/
+setTimeout(function() {
+    console.log('This message is delayed by 3 seconds');
+}, 3000);
+
+
+//***************************Callback function********************************** */
+
+/*Callback Functions
+A callback function is a function passed as an argument to another function,
+ which is then executed inside the outer function.
+ */
+
+function mainfunction(callback) {
+    console.log("Performing operations");
+    setTimeout(function() {
+        callback("Operation completed");
+    }, 3000);
+}
+function callbackFunction(result) {
+    console.log("Result: "+result);
+    }
+
+mainfunction(callbackFunction);
