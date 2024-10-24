@@ -44,3 +44,16 @@ switch (day) {
   default:
     console.log('Unknown day');
 }
+
+
+//*********************************************Practice********************* */
+const score1 = 90;
+
+if (score1 >= 50) {
+    const power ="fly"
+    console.log(`user power ${power}`);
+}
+console.log(`user power ${power}`);// power is not defined....which is perfect ..but 
+// yehi hm agar const power k jagah var power use karte to ye run kar jata jo ki nhi karna chahiye
+
+
