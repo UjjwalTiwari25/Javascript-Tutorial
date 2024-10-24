@@ -80,6 +80,36 @@ for (let index = 1; index <=20; index++) {
 
 
 //************************************While loop*********************** */
+let i = 0;
+while (i <=10) {
+  console.log(`Value of index is ${i}`);
+  i=i+2;
+}
+
+
+let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr = 0;
+while (arr < myArray.length) {
+  console.log(myArray[arr]);
+  arr=arr+1;
+}
+
+//***************************************do-while loop*********************** */
+//pahle kaam hoga fir condition check hoga
+
+// let score =1;
+// do {
+//   console.log(`Score is ${score}`);
+//   score++;
+// } while (score <= 10);
+
+//kya hoga agar score ka value ..let score=11 hota?
+let score1 =11;
+do {
+  console.log(`Score is ${score1}`);
+  score1++;
+} while (score1 <= 10);
+
 
 
 
