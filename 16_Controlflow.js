@@ -53,7 +53,75 @@ if (score1 >= 50) {
     const power ="fly"
     console.log(`user power ${power}`);
 }
-console.log(`user power ${power}`);// power is not defined....which is perfect ..but 
+// console.log(`user power ${power}`);// power is not defined....which is perfect ..but 
 // yehi hm agar const power k jagah var power use karte to ye run kar jata jo ki nhi karna chahiye
 
 
+
+//Implicit scope
+
+let balance= 1000;
+if (balance > 500) console.log("paisa hai");  //aise v likh sakte hai
+
+
+//******************************************nesting*********************** */
+if (balance < 500) {
+    console.log("paisa nhi hai");
+}
+else if (balance < 750) {
+    console.log("paisa nhi hai");
+}
+else if (balance < 950) {
+    console.log("paisa nhi hai");
+}
+else {
+    console.log("paisa hai");
+}
+
+
+    //another real life example
+    const userLoggedIn = true;
+    const userHasBalance = true;
+    const userHasCreditCard = true;
+    const userHasCupon = true;
+
+    if (userLoggedIn && userHasBalance && userHasCreditCard) {
+        console.log("Bhai tum mere mall mi aa sakte ho");
+    }
+   if(userHasBalance || userHasCupon){
+       console.log("Bhai tum mere mall aa sakte ho");
+   }
+    else {
+        console.log("Bhai tum mere mall nhi aa sakte ho");
+    }
+
+    
+
+
+
+//**************************************Switch statement************************************* */
+// switch(key){
+//     case value ;
+//     break;
+//     case value;
+//     break;
+//     default;
+//     break;
+// }
+
+const day1 = "Sunday";
+
+switch (day1) {
+  case 1: "Monday"
+    console.log("Start of the week");
+    break;
+
+  case 2: "Tuesday"
+    console.log("Second day of the week");
+    break;
+
+  default:
+    console.log("Unknown day");
+}
+
+//*******************************************************Truthy and falsy value********************* */
