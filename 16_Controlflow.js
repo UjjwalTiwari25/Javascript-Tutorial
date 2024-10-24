@@ -125,3 +125,8 @@ switch (day1) {
 }
 
 //*******************************************************Truthy and falsy value********************* */
+// Falsy value:
+//  false , 0 , -0 , null , undefined , NaN , "" , BigInt (0n) 
+// Truthy value:
+//  true , "0" , " " , [] , {} , 1 , 2 , "false" , "true" , BigInt (1n)
+// string k andar kuchh v truthy value 
