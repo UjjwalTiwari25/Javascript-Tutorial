@@ -130,3 +130,31 @@ switch (day1) {
 // Truthy value:
 //  true , "0" , " " , [] , {} , 1 , 2 , "false" , "true" , BigInt (1n)
 // string k andar kuchh v truthy value 
+
+const emptyObject = {}
+if(Object.keys(emptyObject).length === 0){
+    console.log("Object is empty");
+}
+
+
+
+//******************************Nullish Coalescing Operator **************************/
+/*The nullish coalescing operator (??) in JavaScript is used to provide a default value when dealing with null or undefined. 
+It returns the right-hand operand only if the left-hand operand is null or undefined, otherwise, it returns the left-hand operand.
+
+*/
+// let result = leftOperand ?? rightOperand;
+ //If the leftOperand is null or undefined, it returns the rightOperand.
+// Otherwise, it returns the leftOperand.
+
+let val1;
+// val1=5 ?? 10;
+val1 =null ?? 10;  //pahla null ya undefined hoga to tab dusra assign hoga otherwise pahla he assign hoga
+ val1 =undefined ?? 10;
+console.log(val1); // 5
+
+//******************************Ternary Operator **************************/
+//condition ? true : false
+
+const icePrice = 100;
+icePrice>=80 ? console.log("Iced Coffee") : console.log("Hot Coffee");
