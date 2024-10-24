@@ -97,18 +97,19 @@ while (arr < myArray.length) {
 //***************************************do-while loop*********************** */
 //pahle kaam hoga fir condition check hoga
 
-// let score =1;
-// do {
-//   console.log(`Score is ${score}`);
-//   score++;
-// } while (score <= 10);
+let score =1;
+do {
+  console.log(`Score is ${score}`);
+  score++;
+} while (score <= 10);
 
 //kya hoga agar score ka value ..let score=11 hota?
 let score1 =11;
 do {
   console.log(`Score is ${score1}`);
   score1++;
-} while (score1 <= 10);
+} while (score1 <= 10); //isme 11 print hoga pahle fir baki ka condition check hoga
+
 
 
 
