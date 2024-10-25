@@ -129,7 +129,30 @@ for (const greet of greetings) {
 
 }
 
-//
+//another example
+const coding =[
+  {
+    langName:"python",
+    langExtension:"py"
+  },
+  {
+    langName:"java",
+    langExtension:"java"
+  },
+  {
+    langName:"c++",
+    langExtension:"cpp"
+  },
+  {
+    langName:"c",
+    langExtension:"c"
+  }
+]
+coding.forEach((item)=>{
+  // console.log(item.langName);
+  // console.log(item.langExtension);
+  console.log(`Language name is ${item.langName} and language extension is ${item.langExtension}`);
+})
 
 //********************************************************Maps in js************************** */
 /*In JavaScript, Map is a built-in object that holds key-value pairs, 
