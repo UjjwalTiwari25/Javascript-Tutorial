@@ -129,12 +129,14 @@ for (const greet of greetings) {
 
 }
 
+//
+
 //********************************************************Maps in js************************** */
 /*In JavaScript, Map is a built-in object that holds key-value pairs, 
 where both keys and values can be of any data type (including objects, functions, etc.).
  Unlike regular JavaScript objects, 
 Map maintains the order of its elements based on insertion, and keys can be of any data type.
-
+  koi duplicate value nhi hota hai isme
 
 //Creating a Map
 const map = new Map();
@@ -172,5 +174,24 @@ console.log(map.size);  // Output: 2
 map.clear();
 
 */
+const map = new Map()
+map.set("name", "Ujjwal")
+map.set("age", 21)
+map.set("city", "Delhi")
+console.log(map)
+
+//********************Iterating Over a Map***************************** */
+//Using for...of:
+// To get both keys and values:
+// for (const key of map) {
+//   console.log(key);
+// }....aise array k form mi ayega keys and value both
+
+//is tarah se bas hm map pr he iterate kr sakte hai ..bojects pr nhi kar sakte hai
+
+
+for (const [key, value] of map) {
+  console.log(key,":-" , value);
+}
 
 
