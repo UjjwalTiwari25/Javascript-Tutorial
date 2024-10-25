@@ -130,6 +130,47 @@ for (const greet of greetings) {
 }
 
 //********************************************************Maps in js************************** */
+/*In JavaScript, Map is a built-in object that holds key-value pairs, 
+where both keys and values can be of any data type (including objects, functions, etc.).
+ Unlike regular JavaScript objects, 
+Map maintains the order of its elements based on insertion, and keys can be of any data type.
 
+
+//Creating a Map
+const map = new Map();
+
+//You can also initialize a Map with values:
+const map = new Map([
+  ["name", "Ujjwal"],
+  ["age", 21]
+]);
+
+
+//Basic Map Operations
+
+//Adding Elements:        Use .set(key, value) to add key-value pairs.
+map.set("city", "Delhi");
+
+
+//Accessing Elements:     Use .get(key) to retrieve the value for a specific key.
+console.log(map.get("name"));  // Output: Ujjwal
+
+
+//Checking Key Existence:    Use .has(key) to check if a key exists.
+console.log(map.has("age"));  // Output: true
+
+
+//Deleting Elements:    Use .delete(key) to remove a specific key-value pair.
+map.delete("age");
+
+
+//Size of Map:    Use .size to get the number of key-value pairs.
+console.log(map.size);  // Output: 2
+
+
+//Clearing All Entries:    Use .clear() to remove all key-value pairs.
+map.clear();
+
+*/
 
 
