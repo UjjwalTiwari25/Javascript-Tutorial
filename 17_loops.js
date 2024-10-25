@@ -194,4 +194,74 @@ for (const [key, value] of map) {
   console.log(key,":-" , value);
 }
 
+//***********************************Thodi objects ki baat kr le************** */
 
+const myObj = {
+  js : "javascript",
+  py : "python",
+  c  : "c",
+  cpp : "c++"
+}
+
+//for of loop kaam he nhi kr rha tha objects pr
+//objects k liye hm use karenge for in loop...but aisa nhi hai ki ye bas objects k liye he hai
+
+for (const key in myObj) {
+  // console.log(key);
+  // console.log(myObj[key]);
+  console.log(`Key is ${key} and value is ${myObj[key]}`);
+}
+
+
+//*****************kya for in loop array pr laga sakte hai?************* */
+
+const myArray1 = [
+  "Ujjwal",
+  "Tiwari",
+  "Delhi",
+  "India"];
+
+for (const key in myArray1) {
+  console.log(key); // Output: 0, 1, 2, 3
+  console.log(myArray1[key]); // Output: Ujjwal, Tiwari, Delhi, India
+}     
+
+//*****************kya for in loop map pr laga sakte hai?************* */
+
+const myMap = new Map([
+  ["name", "Ujjwal"],
+  ["age", 21],  
+  ["city", "Delhi"],
+]);
+
+for (const key in myMap) {
+  console.log(key); // map is tarah se iteratable nhi hota hai
+  
+}
+
+//************************************for each loop************************** */
+const myLang =["Java" , "Python" , "C++" , "C"];
+myLang.forEach(function(element) {   //yeha function ek callback function hai..iska name nhi hota
+  console.log(element);
+});
+
+//********************forEach with arrow function*************** */
+//myLang.forEach( () => {} )
+
+// myLang.forEach((element) => {
+//   console.log(element);
+// })
+
+myLang.forEach((element , index , array) => {
+  console.log(element , index , array);
+})
+
+
+
+//*****************************************PrintMe********************** */
+
+function printMe(item) {
+  console.log(item);
+}
+
+myLang.forEach(printMe)
