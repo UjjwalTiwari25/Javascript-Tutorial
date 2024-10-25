@@ -73,3 +73,37 @@ const myNum4 = [1, 2, 3, 4, 5 ,6, 7, 8, 9, 10];
 const myNewNums2 = myNum4.map((num)=>(num +10)).filter((num)=>num>15).map((num)=>num*2);  //[ 32, 34, 36, 38, 40 ]
 console.log(myNewNums2);
 
+
+//********************************************************Reduce********************** */
+
+const myNum5 = [1, 2, 3, 4, 5 ,6, 7, 8, 9, 10];
+const myTotal = myNum5.reduce(function(acc ,curVal){
+    console.log(`acc: ${acc} curVal: ${curVal}`);
+    return acc + curVal;
+} , 0);  //here 0 is initial value
+console.log(myTotal);
+
+//****************************Now writing this in arrow function********************* */
+//myNum5.reduce(()=>() , 0);
+
+const myNum6 = [1, 2, 3, 4, 5 ,6, 7, 8, 9, 10];
+const myTotal2 = myNum6.reduce((acc ,curVal)=> acc + curVal, 0);  //here 0 is initial value
+console.log(myTotal2);
+
+//****************************Using this on a Object****************** */
+const myShoppinCart =[{
+    itemName1: "Js course",
+    price : 1000,
+},
+{
+    itemName2: "DS course",
+    price : 12000,
+},
+{
+    itemName3: "Java course",
+    price : 10000,
+}
+
+]
+ const myPriceToPay = myShoppinCart.reduce((acc ,item)=> acc + item.price ,0)
+console.log(myPriceToPay);
