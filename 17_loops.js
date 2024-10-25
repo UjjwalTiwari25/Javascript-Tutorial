@@ -111,7 +111,25 @@ do {
 } while (score1 <= 10); //isme 11 print hoga pahle fir baki ka condition check hoga
 
 
+//***************************************************For of loop********************** */
+//It is array specific loop
+//putting objects inside an array
+//[" " ," " , " "]
+//[{},{},{}]
 
+const arrr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (const num of arrr) {
+  console.log(num); 
+}
+
+//another example
+const greetings = ["Good Morning", "Good Afternoon", "Good Evening"];
+for (const greet of greetings) {
+  console.log(`Hello Virat ${greet}`);
+
+}
+
+//********************************************************Maps in js************************** */
 
 
 
