@@ -35,5 +35,22 @@
         li.appendChild(document.createTextNode(langName));
         document.querySelector(".language").appendChild(li);
     }addOptimisedLanguage("C++");
+
+
+    //if we have to edit content
+     const secondLang = document.querySelector("li:nth-child(2)")
+     //secondLang.innerHTML = "C++"
+      const newLi = document.createElement("li")
+      newLi.textContent = "C"
+      secondLang.replaceWith(newLi);
+
+      //another apporach
+      const firstLang = document.querySelector("li:first-child")
+      firstLang.outerHTML = `<li>Ruby</li>`
+
+      //removing content
+      const lastLang = document.querySelector("li:last-child")
+      lastLang.remove();
+
 </script>
 </html>
