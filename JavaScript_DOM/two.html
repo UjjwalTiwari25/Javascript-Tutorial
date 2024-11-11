@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chai aur code</title>
 </head>
-<body style ="display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: Arial, sans-serif; background-color: #121212; color: #f4f4f9;">
+<body style = "background-color: #212121; color: #f4f4f9;">
     <div class="parent">
         <div class ="day">one</div>
         <div class ="day">two</div>
         <div class ="day">three</div>
         <div class ="day">four</div>
     </div>
-    
 </body>
+<script>
+     const parent = document.querySelector(".parent")
+     console.log(parent);
+     console.log(parent.children); //HTMLCollection
+     console.log(parent.children[1].innerHTML);
+     
+     for (let i = 0; i < parent.children.length; i++) {
+       console.log ( parent.children[i].innerHTML);
+        
+     } 
+</script>
 </html>
