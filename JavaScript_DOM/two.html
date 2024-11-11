@@ -19,10 +19,25 @@
      console.log(parent);
      console.log(parent.children); //HTMLCollection
      console.log(parent.children[1].innerHTML);
-     
+
      for (let i = 0; i < parent.children.length; i++) {
        console.log ( parent.children[i].innerHTML);
         
      } 
+
+     parent.children[1].style.color = "red";
+
+     console.log(parent.firstElementChild);//moving from parent to child
+     console.log(parent.lastElementChild);
+
+     console.log(parent.firstElementChild.nextElementSibling);
+     console.log(parent.firstElementChild.previousElementSibling);
+
+     const dayOne = document.querySelector(".day");
+     console.log(dayOne);
+     console.log(dayOne.parentElement);
+
+     console.log("NODES: ",parent.childNodes);
+
 </script>
 </html>
