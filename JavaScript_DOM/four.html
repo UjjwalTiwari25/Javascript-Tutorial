@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #f4f4f9;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    /**
+     * Adds a new language to the list of languages on the page.
+     * @param {string} langName - The name of the language to add.
+     */
+    function addLanguage(langName) {
+       const li = document.createElement("li");
+       li.innerHTML =`${langName}`;
+       document.querySelector(".language").appendChild(li);
+        
+    }
+    addLanguage("Python");
+    addLanguage("Java");
+
+    /**
+     * Adds a new language to the list of languages on the page in an optimized manner.
+     * @param {string} langName - The name of the language to add.
+     */
+    function addOptimisedLanguage(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+    }addOptimisedLanguage("C++");
+</script>
+</html>
