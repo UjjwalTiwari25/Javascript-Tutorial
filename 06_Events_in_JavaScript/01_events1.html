@@ -9,13 +9,218 @@
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
-            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" ></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
+   // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+     // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
 </body>
 </html>
+
+//*********************************************************************
+/*JavaScript events are actions that occur in the browser, 
+often as a result of user interactions or browser processes,
+ and can be used to trigger custom code. Events help make web 
+ pages interactive, and they range from mouse clicks and keyboard
+  presses to loading a page or resizing the window.
+
+Here's a detailed look at JavaScript events:
+
+---
+
+### 1. **Types of Events**
+   - **Mouse Events**:
+     - `click`: Triggered when an element is clicked.
+     - `dblclick`: Fires on a double click.
+     - `mouseover`: Activates when the mouse enters an element.
+     - `mouseout`: Triggers when the mouse leaves an element.
+     - `mousedown` / `mouseup`: Fires when the mouse button is pressed or released.
+     - `mousemove`: Occurs when the mouse is moved over an element.
+
+   - **Keyboard Events**:
+     - `keydown`: Triggered when a key is pressed down.
+     - `keypress`: Activates when a key is pressed and held (deprecated).
+     - `keyup`: Fires when a key is released.
+
+   - **Form Events**:
+     - `submit`: Fires when a form is submitted.
+     - `change`: Occurs when an input field loses focus after being edited.
+     - `focus`: Triggered when an input element gains focus.
+     - `blur`: Fires when an input element loses focus.
+
+   - **Window Events**:
+     - `load`: Fires when the whole page (including images, scripts, etc.) has fully loaded.
+     - `resize`: Activates when the browser window is resized.
+     - `scroll`: Fires when the page is scrolled.
+     - `unload`: Triggers when the page is about to be unloaded (e.g., closed or navigated away).
+
+   - **Touch Events** (for mobile devices):
+     - `touchstart`: Fires when a finger touches the screen.
+     - `touchmove`: Occurs when the finger moves across the screen.
+     - `touchend`: Activates when the finger is lifted from the screen.
+
+---
+
+### 2. **Adding Event Listeners**
+   Event listeners allow JavaScript to “listen” for events on elements and execute a function in response.
+
+   - **Syntax**:
+     ```javascript
+     element.addEventListener('event', function, useCapture);
+     ```
+   - **Example**:
+     ```javascript
+     const button = document.getElementById('myButton');
+     button.addEventListener('click', () => {
+         alert('Button clicked!');
+     });
+     ```
+
+   - **Removing Event Listeners**:
+     ```javascript
+     button.removeEventListener('click', yourFunctionName);
+     ```
+
+---
+
+### 3. **Event Object**
+   - The event object provides information about the event and has properties like:
+     - `type`: The type of the event (e.g., `"click"`, `"keyup"`).
+     - `target`: The element that triggered the event.
+     - `currentTarget`: The element where the event listener is attached.
+     - `preventDefault()`: Prevents the default behavior (e.g., form submission).
+     - `stopPropagation()`: Stops the event from propagating up the DOM.
+
+   - **Example**:
+     ```javascript
+     button.addEventListener('click', (event) => {
+         console.log(event.type); // "click"
+         console.log(event.target); // <button id="myButton">
+         event.preventDefault(); // Prevents the default button action if any
+     });
+     ```
+
+---
+
+### 4. **Event Bubbling and Capturing**
+   Events propagate in two phases:
+   - **Event Bubbling**: Starts from the target element and goes up to the document.
+   - **Event Capturing**: Starts from the document and goes down to the target.
+
+   - You can control the propagation phase by passing `true` or `false` in `addEventListener` 
+   as the third parameter.
+     - `true` for capturing phase, `false` (default) for bubbling phase.
+
+   - **Example**:
+     ```javascript
+     parentDiv.addEventListener('click', () => alert('Parent Div'), true); // Capture phase
+     childDiv.addEventListener('click', () => alert('Child Div'), false); // Bubble phase
+     ```
+
+---
+
+### 5. **Common Use Cases and Examples**
+   - **Button Click Event**:
+     ```javascript
+     document.querySelector('#myButton').addEventListener('click', () => {
+         alert('Button was clicked!');
+     });
+     ```
+
+   - **Form Submit Event**:
+     ```javascript
+     const form = document.getElementById('myForm');
+     form.addEventListener('submit', (e) => {
+         e.preventDefault(); // Prevents the page from refreshing
+         console.log('Form submitted!');
+     });
+     ```
+
+   - **Mouse Hover Event**:
+     ```javascript
+     const image = document.querySelector('#myImage');
+     image.addEventListener('mouseover', () => {
+         image.style.border = '2px solid red';
+     });
+     image.addEventListener('mouseout', () => {
+         image.style.border = 'none';
+     });
+     ```
+
+   - **Keyboard Event**:
+     ```javascript
+     document.addEventListener('keydown', (e) => {
+         console.log(`Key pressed: ${e.key}`);
+     });
+     ```
+
+---
+
+### 6. **Event Delegation**
+   - **Concept**: Use a single event listener on a parent element to
+    manage events for its children. This is efficient, especially for dynamic elements.
+
+   - **Example**:
+     ```javascript
+     document.querySelector('#parentList').addEventListener('click', (event) => {
+         if (event.target.tagName === 'LI') {
+             alert(`List item ${event.target.textContent} clicked!`);
+         }
+     });
+     ```
+
+---
+
+### 7. **Best Practices**
+   - **Use addEventListener** over inline HTML events for separation of concerns.
+   - **Remove event listeners** if they’re not needed to prevent memory leaks.
+   - **Use event delegation** for dynamic content.
+   - **Avoid anonymous functions** in event listeners if you need to remove the listener later.
+
+This covers the fundamentals of handling events in JavaScript with a detailed breakdown of methods,
+ techniques, and best practices for managing events effectively.
+*/
