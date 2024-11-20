@@ -29,37 +29,38 @@
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    // altkey, ctrlkey, shiftkey, keyCode................ye sab padhna hai
 
-    document.getElementById('owl').addEventListener('click',function(){
-        alert("owl clicked")}, false);
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log(e)}, false);
         
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation()
+    }, false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log("google clicked");
+    }, false)
    
     
-    // document.querySelector('#images').addEventListener('click', function(e){
-    //     console.log(e.target.tagName);
-    //     if (e.target.tagName === 'IMG') {
-    //         console.log(e.target.id);
-    //         let removeIt = e.target.parentNode
-    //         removeIt.remove()
-    //     }
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            
+        }
     
         
-    // })
+    })
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
