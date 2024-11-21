@@ -12,15 +12,19 @@ const randomColor =function(){
 
 let intervalId;
 const startChangingColor =function(){
-     intervalId=setInterval(changeBgColor,1000);
+     if(!intervalId){
+        intervalId=setInterval(changeBgColor,1000);
+     }
    function changeBgColor(){
     document.body.style.backgroundColor = randomColor();
    }
 }
 
+
 const stopChangingColor =function(){
     clearInterval(intervalId);
-    intervalId=null;//jaisa mera uska kaam hogya*
+    intervalId=null;//...we are overridding intervalId 
+    // ...but we want to write cleaner code..we are flushout intervalId.. jaisa mera uska kaam hogya..hm de-reference kr de value ko
 }
 
 document.querySelector('#start').addEventListener('click',startChangingColor);
