@@ -13,7 +13,21 @@
      
 </body>
 <script>
-    setTimeout()
+    const sayHello =function(){
+        console.log("hello");
+    }
+    const changeText =function(){document.querySelector('h1').innerHTML ="Hello Ujjwal Tiwari"}
+    // setTimeout(changeText,2000);
+     const changeMe=setTimeout(changeText,2000);
+
+    //how to stop this event
+    // clearTimeout()
+    // it need reference
+    // clearTimeout(changeMe);
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("stoped");
+    })
 </script>
 
 </html>
