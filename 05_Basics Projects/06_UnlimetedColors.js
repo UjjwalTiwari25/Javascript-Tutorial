@@ -7,6 +7,7 @@ const randomColor =function(){
     }
     return color
 };
+
 // console.log(Math.floor(Math.random()*16));
 
 let intervalId;
@@ -19,7 +20,7 @@ const startChangingColor =function(){
 
 const stopChangingColor =function(){
     clearInterval(intervalId);
-    intervalId=null;//jaisa mera uska kaam hogya 
+    intervalId=null;//jaisa mera uska kaam hogya*
 }
 
 document.querySelector('#start').addEventListener('click',startChangingColor);
