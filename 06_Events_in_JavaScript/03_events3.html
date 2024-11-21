@@ -13,18 +13,34 @@
     <button><div id="start">Start</div></button> 
 </body>
 <script>
+    let intervalId;
     const sayDate =function(str){
         console.log(str,Date.now());
+    };
+//      const intervalId = setInterval(sayDate,2000,"Ujjwal");
+//     clearInterval(intervalId);
+
+//     const intervalId2 = setInterval(sayDate, 2000, "Ujjwal");
+
+// // Let it run for 5 seconds before stopping
+// setTimeout(() => {
+//     clearInterval(intervalId2);
+// }, 10000);
+document.getElementById('start').addEventListener('click',function(){
+    if(!intervalId){
+        //The if (!intervalId) condition ensures that a new interval
+        //  will only start if no interval is currently running (i.e., intervalId is undefined or null).
+        intervalId=setInterval(sayDate,2000,"Ujjwal");
+        console.log("Printing started");
+    };
+});
+document.getElementById('stop').addEventListener('click',function(){
+    if(intervalId){
+        clearInterval(intervalId);
+        intervalId=null;
+        console.log("Printing stopped");
     }
-     const intervalId = setInterval(sayDate,2000,"Ujjwal");
-    clearInterval(intervalId);
-
-    const intervalId2 = setInterval(sayDate, 2000, "Ujjwal");
-
-// Let it run for 5 seconds before stopping
-setTimeout(() => {
-    clearInterval(intervalId2);
-}, 10000);
+});
 
 </script>
 
