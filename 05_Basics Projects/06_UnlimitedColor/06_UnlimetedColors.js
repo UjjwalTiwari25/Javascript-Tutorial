@@ -11,6 +11,13 @@ const randomColor =function(){
 // console.log(Math.floor(Math.random()*16));
 
 let intervalId;
+/**
+ * This function starts changing the background color of the page every second.
+ * It first checks if an interval has already been set, and if not, it sets one.
+ * The interval calls the changeBgColor function every second.
+ * The changeBgColor function changes the background color of the page to a
+ * randomly generated color.
+ */
 const startChangingColor =function(){
      if(!intervalId){
         intervalId=setInterval(changeBgColor,1000);
