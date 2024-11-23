@@ -48,6 +48,7 @@ const promiseFour = new Promise(function(resolve, reject){
     return user.username
 }).then((username) => {
     console.log(username);
+
 }).catch(function(error){
     console.log(error);
 }).finally(() => console.log("The promise is either resolved or rejected"))
@@ -67,8 +68,8 @@ const promiseFive = new Promise(function(resolve, reject){
 
 async function consumePromiseFive(){
     try {
-        const response = await promiseFive
-        console.log(response);
+        const response = await promiseFive      // this will wait for promise to resolve
+        console.log(response);     //yeha hm error gracefully handle karte hai
     } catch (error) {
         console.log(error);
     }
@@ -80,10 +81,10 @@ consumePromiseFive()
 //     try {
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//         const data = await response.json()
+//         const data = await response.json()  //fetch pahle ek library thi...ab to as a object use karte hai
 //         console.log(data);
 //     } catch (error) {
-//         console.log("E: ", error);
+//         console.log("E: ", error); 
 //     }
 // }
 
