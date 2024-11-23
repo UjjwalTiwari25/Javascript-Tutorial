@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .card h2 {
+            margin: 10px 0 5px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="userCard" style="display: none;">
+        <img id="profilePicture" alt="Profile Picture">
+        <h2 id="userName"></h2>
+        <p id="followersCount"></p>
+    </div>
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/UjjwalTiwari25';
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('GET', requestUrl);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+
+                // Update the card with the fetched data
+                const userCard = document.getElementById('userCard');
+                const profilePicture = document.getElementById('profilePicture');
+                const userName = document.getElementById('userName');
+                const followersCount = document.getElementById('followersCount');
+
+                profilePicture.src = data.avatar_url; // Set profile picture
+                userName.textContent = data.name || data.login; // Display name or username
+                followersCount.textContent = `Followers: ${data.followers}`; // Display followers count
+
+                userCard.style.display = 'block'; // Make the card visible
+            }
+        };
+
+        xhr.send();
+    </script>
+</body>
+</html>
