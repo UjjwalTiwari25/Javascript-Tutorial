@@ -3,7 +3,7 @@ function multiplyBy5(num) {
 }
 
 // Assigning a property `power` to the function
-multiplyBy5.power = 5;
+multiplyBy5.power = 10;
 
 // Calling the function with an argument
 console.log(multiplyBy5(5)); // Output: 25
