@@ -1,4 +1,3 @@
-
 ---
 
 # 🚀 JavaScript Quick Revision Guide
